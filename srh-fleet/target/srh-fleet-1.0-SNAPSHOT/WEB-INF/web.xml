@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  version="2.5">
+
+<servlet>
+    <servlet-name>signupJsp</servlet-name>
+    <jsp-file>/static/jsp/signup.jsp</jsp-file>
+</servlet>
+
+
+<servlet>
+    <servlet-name>loginJsp</servlet-name>
+    <jsp-file>/static/jsp/login.jsp</jsp-file>
+</servlet>
+
+<servlet>
+    <servlet-name>dashboardJsp</servlet-name>
+    <jsp-file>/static/jsp/dashboard.jsp</jsp-file>
+</servlet>
+
+
+<servlet>
+    <servlet-name>updateLocationJsp</servlet-name>
+    <jsp-file>/static/jsp/updateLocation.jsp</jsp-file>
+</servlet>
+
+
+<servlet>
+    <servlet-name>adminJsp</servlet-name>
+    <jsp-file>/static/jsp/admin.jsp</jsp-file>
+</servlet>
+
+
+<servlet>
+  <servlet-name>signupServlet</servlet-name>
+  <servlet-class>com.application.SignupServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>signupServlet</servlet-name>
+  <url-pattern>/signup</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>loginServlet</servlet-name>
+  <servlet-class>com.application.LoginServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>loginServlet</servlet-name>
+  <url-pattern>/login</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>createVehicleServlet</servlet-name>
+  <servlet-class>com.application.CreateVehicleServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>createVehicleServlet</servlet-name>
+  <url-pattern>/createVehicle</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>updateLocationServlet</servlet-name>
+  <servlet-class>com.application.UpdateLocationServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>updateLocationServlet</servlet-name>
+  <url-pattern>/updateLocation</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>assignVehicleServlet</servlet-name>
+  <servlet-class>com.application.AssignVehicleServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>assignVehicleServlet</servlet-name>
+  <url-pattern>/admin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>updateHolidayServlet</servlet-name>
+  <servlet-class>com.application.UpdateHolidaysServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>updateHolidayServlet</servlet-name>
+  <url-pattern>/updateHolidays</url-pattern>
+</servlet-mapping>
+
+<filter>
+  <filter-name>ObjectifyFilter</filter-name>
+  <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+</filter>
+
+<listener>
+  <listener-class>com.application.OfyHelper</listener-class>
+</listener>
+
+</web-app>

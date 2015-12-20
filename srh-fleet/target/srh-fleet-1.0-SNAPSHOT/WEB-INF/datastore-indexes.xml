@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+    <datastore-index kind="Employee">
+        <property name="employeeId" direction="asc" />
+        <property name="password" direction="asc" />
+    </datastore-index>
+
+    <datastore-index kind="Vehicle">
+        <property name="number" direction="asc" />
+        <property name="seatCount" direction="asc" />
+    </datastore-index>
+
+</datastore-indexes>
